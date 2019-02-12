@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
+  "name": "b-quick",
+  "private": true,
+  "scripts": {
+    "dev": "node dev/server.js"
+  },
+  "version": "0.0.0",
+  "workspaces": [
+    "www"
+  ]
+}
