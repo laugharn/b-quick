@@ -1,4 +1,4 @@
-const config = require("../www/next.config");
+const config = require("../workspaces/www/next.config");
 const next = require("next");
 const port = parseInt(process.env.PORT, 10) || 3000;
 

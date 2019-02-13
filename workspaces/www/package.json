@@ -1,0 +1,21 @@
+{
+  "name": "www",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dependency": "file:../dependency",
+    "next": "^8.0.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "autoprefixer": "^9.4.7",
+    "cssnano": "^4.1.8",
+    "next-fonts": "^0.17.0",
+    "next-purgecss": "^3.0.0",
+    "postcss-easy-import": "^3.0.0",
+    "tailwindcss": "^0.7.4"
+  }
+}

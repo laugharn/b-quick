@@ -12,7 +12,7 @@ module.exports = withFonts(
   withCSS(
     withPurgeCSS({
       dev: process.env.NODE_ENV !== "production",
-      dir: process.env.NODE_ENV !== "production" ? "./www" : ".",
+      dir: process.env.NODE_ENV !== "production" ? "./workspaces/www" : ".",
       env: {
         PORT: process.env.PORT
       },

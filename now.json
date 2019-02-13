@@ -1,9 +1,9 @@
 {
-  "builds": [{ "src": "www/package.json", "use": "@now/next" }],
+  "builds": [{ "src": "workspaces/www/package.json", "use": "@now/next" }],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/www/$1"
+      "dest": "/workspaces/www/$1"
     }
   ],
   "version": 2
