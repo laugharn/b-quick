@@ -8,6 +8,10 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = require("express")();
 
+  server.get('/user/:name', (req, res) => {
+    return app.render(req, res, '/n3', { name: req.params.name })
+  });
+
   server.get("*", (req, res) => {
     return handle(req, res);
   });

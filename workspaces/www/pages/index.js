@@ -1,7 +1,3 @@
-import "../styles/index.css";
-
-import dependency from "dependency";
-
 export default () => {
-  return <div>{dependency()}</div>;
+  return <div>Welcome to Next.js running on {process.env.PORT}</div>;
 };

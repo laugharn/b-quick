@@ -5,7 +5,7 @@
   "name": "b-quick",
   "private": true,
   "scripts": {
-    "dev": "node dev/server.js"
+    "dev": "PORT=3000 node dev/server.js"
   },
   "version": "0.0.0",
   "workspaces": [

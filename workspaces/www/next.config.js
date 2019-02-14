@@ -8,24 +8,25 @@ class TailwindExtractor {
   }
 }
 
+const config = {
+  dev: process.env.NODE_ENV !== "production",
+  dir: process.env.NODE_ENV !== "production" ? "./workspaces/www" : ".",
+  env: {
+    PORT: process.env.PORT
+  },
+  purgeCss: {
+    extractors: [
+      {
+        extractor: TailwindExtractor,
+        extensions: ["html", "js", "css"]
+      }
+    ],
+    whitelist: ["body", "html"]
+  },
+  target: "serverless"
+}
+
 module.exports = withFonts(
-  withCSS(
-    withPurgeCSS({
-      dev: process.env.NODE_ENV !== "production",
-      dir: process.env.NODE_ENV !== "production" ? "./workspaces/www" : ".",
-      env: {
-        PORT: process.env.PORT
-      },
-      purgeCss: {
-        extractors: [
-          {
-            extractor: TailwindExtractor,
-            extensions: ["html", "js", "css"]
-          }
-        ],
-        whitelist: ["body", "html"]
-      },
-      target: "serverless"
-    })
+  withCSS( process.env.NODE_ENV == 'production' ? withPurgeCSS(config) : config
   )
 );
