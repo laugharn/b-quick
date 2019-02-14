@@ -2,7 +2,7 @@
   "devDependencies": {
     "express": "^4.16.4"
   },
-  "name": "b-quick",
+  "name": "quick",
   "private": true,
   "scripts": {
     "dev": "PORT=3000 node dev/server.js"
